@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast</title>
+</head>
+<body>
+        
+    <div id="image-container"></div>
+    <script>
+        document.getElementById("breakfastButton").addEventListener("click", function() {
+            fetch('/load_breakfast_images/')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('image-container').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+body,.main{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    height: 100vh; 
+    background-image: url(../images/img.png);
+    background-size: cover;
+    background-position: center;
+    padding-left: 100px;
+    padding-top: 70px;
+
+  }
+
+.welcome-box {
+    text-align: center;
+    width: 500px;
+    height: 550px;
+    background-color: #f0f0f0; 
+    border: 5px solid darkgreen; 
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px rgba(153,155,168,0.25); 
+}
+
+.welcome-box h1 {
+    font-size: 40px;
+    color: #333; 
+    padding-top: 30px;
+  }
+
+.welcome-box img {
+    animation: shakeBottom 0.8s ease infinite;
+}
+
+.btn button {
+    background-color: green;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: transform .4s;
+    cursor: pointer;
+  }
+  
+.btn button:hover {
+    transform: scale(1.2);
+  }
+
+@keyframes shakeBottom {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        padding-left: 20px;
+        background-image: url(../images/img.png);
+        padding-top: 30px;
+        width: 100%;
+        height: auto;
+        padding-bottom: 30px;
+    }
+    .welcome-box {
+        width: 80%;
+        height: auto;
+    }
+    .welcome-box h1 {
+        font-size: 15px;
+    }
+
+    .welcome-box img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .btn button {
+        background-color: green; 
+        margin-bottom: 20px; 
+        font-size: 13px;
+        padding: 5px 10px; 
+    }
+}
+
+ 
